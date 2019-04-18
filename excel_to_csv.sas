@@ -3,17 +3,17 @@
 ** Kevin Beverly 2018-06-24
 *********************************************************************************************;
 ** Convert spreadsheet workbook to CSV via Python script
-**   1. Python: \\V-FS4\nc\sas\macros\utilities\python\csv-remove-newline\excel_to_csv.py
+**   1. Python program: excel_to_csv.py
 **   2. Remove embedded newlines within cells
 **   3. Consolidate whitespace
 **   4. Convert text to utf-8 (non-translatable unicode characters replaced with "?")
 **   5. Import to SAS via PROC IMPORT DBMS=CSV with GUESSINGROWS=max and GETNAMES
 **   6. Check that row and column counts are non-zero and match between CSV and SAS dataset
 ** Example call: 
-%**let spreadsheet = \\V-FS4\nc\sas\project\import\topic\name-of-spreadsheet.xlsx;
+%**let spreadsheet = \\path\name-of-spreadsheet.xlsx;
 %**let worksheet = Sheet1;
-%**let csv = \\V-FS4\nc\sas\csm-p\inputs\meds\csmp_medscoded.csv;
-%**let dset = meds_coded;
+%**let csv = \\path\meds_coded.csv;
+%**let dset = medcode;
 %**excel_to_csv ( spreadsheet=&spreadsheet, worksheet=&worksheet, csv=&csv, dset=&dset );
 *********************************************************************************************;
 
