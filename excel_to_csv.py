@@ -1,4 +1,4 @@
-# \\V-FS4\nc\sas\macros\utilities\python\csv-remove-newline\excel_to_csv.py
+# excel_to_csv.py
 # Kevin Beverly 2018-06-24
 
 # Save XLS worksheet as CSV with newlines removed as UTF-8 (non-translatable chars print as "?")
@@ -7,10 +7,10 @@
 # Argument 3: Full path to CSV output file
 
 # Call from SAS:
-#  %let spreadsheet = \\v-fs4\nc\sas\p-15\P15_2013\inputs\conmed\p15_conmed_coding_22JUN2018_kb.xlsx;
+#  %let spreadsheet = [full path to the Excel file];
 #  %let worksheet = Not coded; ** has newlines embedded in cells;
-#  %let pyprog = \\V-FS4\nc\sas\macros\utilities\python\csv-remove-newline\excel_to_csv.py;
-#  %let outfile = \\v-fs4\nc\sas\p-15\P15_2013\inputs\conmed\test1.csv;
+#  %let pyprog = [full path to excel_to_csv.py];
+#  %let outfile = [full path to the CSV file that will be created];
 #  x C:\Python\Python36\python.exe "&pyprog" "&spreadsheet" "&worksheet" "&outfile" ;
 #  proc import datafile="&outfile" out=new_coded dbms=csv replace;
 #        GUESSINGROWS=max;
